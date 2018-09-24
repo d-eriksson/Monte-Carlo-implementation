@@ -13,3 +13,4 @@ CTestTestfile.cmake
 /Debug
 /Win32
 /MonteCarlo.dir
+/bin
