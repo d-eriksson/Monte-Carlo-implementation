@@ -1,17 +1,13 @@
-#include "Vertex.h"
-#include "direction.h"
-#include "triangle.h"
+#include <../glm/glm/glm.hpp>
 #include "ColorDbl"
 
 class Ray {
 public:
-	Vertex * start;
-	Vertex * end;
-	Direction * direction;
-	Triangle * triangle;
+	glm::vec3 start;
+	glm::vec3 end;
+	glm::vec3 direction;
 	ColorDbl raycolor;
 
-
 	Ray();
-
+	Ray(glm::vec3 origin, glm::vec3 dir);
 };
