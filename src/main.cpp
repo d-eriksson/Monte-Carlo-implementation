@@ -1,6 +1,7 @@
 #include <iostream>
 #include "direction.h"
 #include "Vertex.h"
+#include "ColorDbl.h"
 
 
 using namespace std;
@@ -29,6 +30,18 @@ int main(void) {
 	cout << *V4 << endl;
 	cout << *V5 << endl;
 
-     return(0);
+	ColorDbl *CD1 = new ColorDbl();
+	ColorDbl *CD2 = new ColorDbl(0.2,0.3,0.4);
+	ColorDbl *CD3 = new ColorDbl(1.2,0.3,0.2);
+
+	cout << *CD1 << endl;
+	cout << *CD2 << endl;
+	cout << *CD3 << endl;
+	cout << CD2->getAverageIntesity() << endl;
+	cout << CD2->getHighestIntesity() << endl;
+	cout << CD2->getB() << endl;
+
+
+  return(0);
 
 }
