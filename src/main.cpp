@@ -1,6 +1,7 @@
 #include <iostream>
 #include "direction.h"
 #include "Vertex.h"
+#include "triangle.h"
 
 
 using namespace std;
@@ -28,6 +29,25 @@ int main(void) {
 	cout << *V3 << endl;
 	cout << *V4 << endl;
 	cout << *V5 << endl;
+
+
+	Triangle *T1 = new Triangle(glm::vec3(0, 0, 1), glm::vec3(0, 2, 1), glm::vec3(2, 0, 1), glm::vec3(0.85, 0.26, 0));
+	Ray *R1 = new Ray(glm::vec3(0, 0, 0), glm::vec3(5, 5, 5));
+	Ray *R2 = new Ray(glm::vec3(0, 0, 0), glm::vec3(5, 0, 0));
+
+
+	std::cout << "Intersecting with R1, should be an intersection in the middle of the triangle: " << std::endl;
+	if (T1->rayIntersection(R1))
+		std::cout << "Intersection returned true with R1" << std::endl;
+	else
+		std::cout << "Intersection returned false with R1" << std::endl;
+
+	std::cout << "Intersecting with R2, should not intersect: " << std::endl;
+	if (T1->rayIntersection(R2))
+		std::cout << "Intersection returned true with R2" << std::endl;
+	else
+		std::cout << "Intersection returned false with R2" << std::endl;
+
 
      return(0);
 
