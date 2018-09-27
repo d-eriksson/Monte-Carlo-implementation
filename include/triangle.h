@@ -5,11 +5,12 @@ class Triangle {
 public:
 	//The corner points of the triangle
 	glm::vec3 vertex1, vertex2, vertex3;
+
 	//Edges of the triangle, useful for calculating the normal
 	glm::vec3 edge1, edge2, edge3;
-	
+
 	//Color of the triangle
-	glm::vec3 color;
+	ColorDbl color;
 
 	//The normal of the triangle
 	glm::vec3 normal;
