@@ -50,17 +50,12 @@ void Scene::addTriangle(Triangle * T){
 
 void Scene::triangleIntersect(Ray * rayIn)
 {
-	/*/ Loop over all triangles in list, add to new list if intersecting with ray:
+	// Loop over all triangles in list, add to new list if intersecting with ray:
 	std::list<Triangle>::iterator it = triangles.begin();
 	for(size_t i = 0; i<triangles.size(); ++i){
 		if((*it).rayIntersection(rayIn)){
 			triangles_intersected.push_back(*(it));
 		}
 		++it;
-	}*/
+	}
 }
-
-
-
-
-

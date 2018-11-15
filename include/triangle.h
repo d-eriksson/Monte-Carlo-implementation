@@ -6,7 +6,7 @@ public:
 	glm::vec3 vertex1, vertex2, vertex3;
 	
 	//Edges are used to calculate the normal
-	glm::vec3 edge1, edge2;	
+	glm::vec3 edge1, edge2;
 
 	//The normal of the triangle
 	glm::vec3 normal;

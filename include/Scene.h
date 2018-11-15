@@ -6,6 +6,7 @@ public:
 
 	//Constructor with 24 triangles
 	Scene();
+	
 	void Scene::addTriangle(Triangle * T);
 	void Scene::triangleIntersect(Ray * rayIn);
 
