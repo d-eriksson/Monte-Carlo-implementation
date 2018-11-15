@@ -1,13 +1,16 @@
 #include <../glm/glm/glm.hpp>
-//#include "ColorDbl"
+#include "ColorDbl.h"
 
 class Ray {
 public:
 	glm::vec3 start;
-	glm::vec3 end;
 	glm::vec3 direction;
-	//ColorDbl raycolor;
+	glm::vec3 end;
+	ColorDbl raycolor;
+//	Some sort of reference to an intersected triangle,
+//  however, this is problematic since Triangle inherits Ray
+	int triangle_index;
 
-	Ray();
+	Ray() = delete;
 	Ray(glm::vec3 origin, glm::vec3 dir);
 };
