@@ -1,14 +1,17 @@
 #include "Pixel.h"
 
+Pixel::Pixel() {
+    color = new ColorDbl(0.0,0.0,0.0);
+}
 Pixel::Pixel(ColorDbl c) {
     color = c;
 }
 
 void Pixel::setColorDouble(const ColorDbl &c) {
-    Pixel::color = c;
+    color = c;
 }
 
-const ColorDouble &Pixel::getColorDouble() const {
+ColorDouble Pixel::getColorDouble(){
     return color;
 }
 
@@ -20,6 +23,6 @@ Ray Pixel::getFirstRay() {
     return rayList[0];
 }
 
-const std::vector<Ray> &Pixel::getRayList() const {
+std::vector<Ray> Pixel::getRayList() {
     return rayList;
 }

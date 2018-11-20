@@ -1,8 +1,9 @@
 #include <iostream>
-#include "direction.h"
+#include "Direction.h"
 #include "Vertex.h"
-#include "triangle.h"
+#include "Triangle.h"
 #include "ColorDbl.h"
+#include "Pixel.h"
 
 
 using namespace std;
@@ -59,6 +60,12 @@ int main(void) {
 	cout << CD2->getAverageIntesity() << endl;
 	cout << CD2->getHighestIntesity() << endl;
 	cout << CD2->getB() << endl;
+
+	Pixel *P1 = new Pixel();
+	P1->setColorDouble(&CD3);
+	P1->addRay(&R1);
+	cout << P1->getColorDouble() << endl;
+
 
 
   return(0);

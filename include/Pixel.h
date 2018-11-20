@@ -6,11 +6,12 @@
 
 class Pixel {
 public:
-    Pixel(ColorDbl c = ColorDbl(0.0f));
+    Pixel();
+    Pixel(ColorDbl c);
     void setColorDouble(const ColorDouble &colorDouble);
     void addRay(Ray &);
-    const ColorDouble &getColorDouble() const;
-    const std::vector<Ray> &getRayList() const;
+    ColorDouble getColorDouble();
+    std::vector<Ray> getRayList();
     Ray getFirstRay();
 
 private:

@@ -1,4 +1,4 @@
-#include "..\include\triangle.h"
+#include "..\include\Triangle.h"
 
 
 Triangle::Triangle(glm::vec3 inV1, glm::vec3 inV2, glm::vec3 inV3, glm::vec3 triangle_color)

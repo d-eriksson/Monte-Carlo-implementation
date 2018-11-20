@@ -1,4 +1,4 @@
-#include "..\include\direction.h"
+#include "..\include\Direction.h"
 #include <math.h>
 
 Direction::Direction(double xIn, double yIn, double zIn)

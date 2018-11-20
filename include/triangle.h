@@ -1,4 +1,4 @@
-#include "ray.h"
+#include "Ray.h"
 #include <iostream>
 
 class Triangle {
@@ -7,7 +7,7 @@ public:
 	glm::vec3 vertex1, vertex2, vertex3;
 	//Edges of the triangle, useful for calculating the normal
 	glm::vec3 edge1, edge2, edge3;
-	
+
 	//Color of the triangle
 	glm::vec3 color;
 
