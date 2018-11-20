@@ -1,22 +1,24 @@
 #include "ray.h"
-#include <iostream>
 
 class Triangle {
 public:
 	//The corner points of the triangle
 	glm::vec3 vertex1, vertex2, vertex3;
-	//Edges of the triangle, useful for calculating the normal
-	glm::vec3 edge1, edge2, edge3;
 	
-	//Color of the triangle
-	glm::vec3 color;
+	//Edges are used to calculate the normal
+	glm::vec3 edge1, edge2;
 
 	//The normal of the triangle
 	glm::vec3 normal;
 
-	//No default constructor of triangle needed
+	//Color of the triangle
+	ColorDbl color;
+	
+	//Constructors; Default constructor is not used
 	Triangle() = delete;
-	Triangle(glm::vec3 vert1, glm::vec3 vert2, glm::vec3 vert3, glm::vec3 triangle_color);
+	//Temporary non-color version
+	Triangle(glm::vec3 vert1, glm::vec3 vert2, glm::vec3 vert3);
+	//Triangle(glm::vec3 vert1, glm::vec3 vert2, glm::vec3 vert3, glm::vec3 triangle_color);
 
 	bool Triangle::rayIntersection(Ray * rayIn);
 };
