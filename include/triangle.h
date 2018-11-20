@@ -1,10 +1,12 @@
-#include "ray.h"
+#ifndef MONTECARLO_TRIANGLE_H
+#define MONTECARLO_TRIANGLE_H
+#include "Ray.h"
 
 class Triangle {
 public:
 	//The corner points of the triangle
 	glm::vec3 vertex1, vertex2, vertex3;
-	
+
 	//Edges are used to calculate the normal
 	glm::vec3 edge1, edge2;
 
@@ -13,7 +15,7 @@ public:
 
 	//Color of the triangle
 	ColorDbl color;
-	
+
 	//Constructors; Default constructor is not used
 	Triangle() = delete;
 	//Temporary non-color version
@@ -22,3 +24,4 @@ public:
 
 	bool Triangle::rayIntersection(Ray * rayIn);
 };
+#endif //MONTECARLO_TRIANGLE_H

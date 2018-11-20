@@ -1,3 +1,5 @@
+#ifndef MONTECARLO_DIRECTION_H
+#define MONTECARLO_DIRECTION_H
 #include <iostream>
 
 class Direction {
@@ -17,3 +19,4 @@ public:
 	//Modified output
 	friend std::ostream& operator<< (std::ostream &out, const Direction &Direction);
 };
+#endif //MONTECARLO_DIRECTION_H

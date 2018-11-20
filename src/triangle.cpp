@@ -1,4 +1,4 @@
-#include "..\include\triangle.h"
+#include "Triangle.h"
 
 Triangle::Triangle(glm::vec3 inV1, glm::vec3 inV2, glm::vec3 inV3)
 {
@@ -19,7 +19,7 @@ bool Triangle::rayIntersection(Ray * rayIn)
 {
 	// NOTE: This method should be called recursively for every
 	//triangle in the scene. From Scene::triangleIntersect()
-	
+
 	// Calculate t; The distance to the intersection in the Ray direction
 	double t = (glm::dot(glm::cross((rayIn->start - vertex1),edge1), edge2)) / (glm::dot(glm::cross(rayIn->direction, edge2), edge1));
 
