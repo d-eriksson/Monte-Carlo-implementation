@@ -6,11 +6,10 @@
 
 class Pixel {
 public:
-    Pixel();
-    Pixel(ColorDbl c);
-    void setColorDouble(const ColorDouble &colorDouble);
+    Pixel(ColorDbl colorDouble = ColorDbl(0.0,0.0,0.0));
+    void setColorDouble(const ColorDbl &colorDouble);
     void addRay(Ray &);
-    ColorDouble getColorDouble();
+    ColorDbl getColorDouble();
     std::vector<Ray> getRayList();
     Ray getFirstRay();
 
@@ -18,6 +17,5 @@ private:
     std::vector<Ray> rayList;
     ColorDbl color;
 };
-
 
 #endif //MONTECARLO_PIXEL_H

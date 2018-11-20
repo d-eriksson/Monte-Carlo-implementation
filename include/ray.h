@@ -1,3 +1,5 @@
+#ifndef MONTECARLO_RAY_H
+#define MONTECARLO_RAY_H
 #include <../glm/glm/glm.hpp>
 #include "ColorDbl.h"
 
@@ -15,3 +17,4 @@ public:
 	Ray() = delete;
 	Ray(glm::vec3 origin, glm::vec3 dir);
 };
+#endif //MONTECARLO_RAY_H

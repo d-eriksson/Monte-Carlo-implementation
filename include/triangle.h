@@ -1,4 +1,6 @@
-#include "ray.h"
+#ifndef MONTECARLO_TRIANGLE_H
+#define MONTECARLO_TRIANGLE_H
+#include "Ray.h"
 
 class Triangle {
 public:
@@ -22,3 +24,4 @@ public:
 
 	bool Triangle::rayIntersection(Ray * rayIn);
 };
+#endif //MONTECARLO_TRIANGLE_H

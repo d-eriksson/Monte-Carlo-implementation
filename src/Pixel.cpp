@@ -1,8 +1,6 @@
 #include "Pixel.h"
 
-Pixel::Pixel() {
-    color = new ColorDbl(0.0,0.0,0.0);
-}
+
 Pixel::Pixel(ColorDbl c) {
     color = c;
 }
@@ -11,7 +9,7 @@ void Pixel::setColorDouble(const ColorDbl &c) {
     color = c;
 }
 
-ColorDouble Pixel::getColorDouble(){
+ColorDbl Pixel::getColorDouble(){
     return color;
 }
 

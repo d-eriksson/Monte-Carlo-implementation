@@ -1,4 +1,4 @@
-#include "..\include\Scene.h"
+#include "Scene.h"
 
 Scene::Scene()
 {
@@ -15,7 +15,7 @@ Scene::Scene()
 	glm::vec3 roof4(13,0,5);
 	glm::vec3 roof5(10,-6,5);
 	glm::vec3 roof6(0,-6,5);
-	
+
 	//Floor
 	triangles.push_back(Triangle(floor1,floor6,floor2));
 	triangles.push_back(Triangle(floor2,floor6,floor3));
@@ -45,7 +45,7 @@ Scene::Scene()
 }
 
 void Scene::addTriangle(Triangle * T){
-	
+
 }
 
 void Scene::triangleIntersect(Ray * rayIn)
