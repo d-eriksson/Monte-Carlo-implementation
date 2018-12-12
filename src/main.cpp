@@ -1,5 +1,5 @@
 #include <iostream>
-#include "direction.h"
+#include "Direction.h"
 #include "Vertex.h"
 //#include "triangle.h"
 #include "ColorDbl.h"
