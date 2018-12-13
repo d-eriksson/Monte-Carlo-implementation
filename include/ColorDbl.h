@@ -14,7 +14,6 @@ class ColorDbl {
     double getB();
 
     friend std::ostream& operator<< (std::ostream &out, const ColorDbl &c);
-  private:
     double r;
     double g;
     double b;

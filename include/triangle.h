@@ -26,6 +26,6 @@ public:
 	bool Triangle::rayIntersection(Ray * rayIn);
 
 	//Variable to store distance of intersection in every triangle (NOT NECESSARY LATER)
-	double t;
+	float t;
 };
 #endif //MONTECARLO_TRIANGLE_H

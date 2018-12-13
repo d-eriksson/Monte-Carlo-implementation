@@ -9,7 +9,7 @@ public:
     Pixel(ColorDbl colorDouble = ColorDbl(0.0,0.0,0.0));
     void setColorDouble(const ColorDbl &colorDouble);
     void setColorDoubleFromRayList();
-    void addRay(Ray &);
+    void addRay(Ray r);
     ColorDbl getColorDouble();
     std::vector<Ray> getRayList();
     Ray getFirstRay();

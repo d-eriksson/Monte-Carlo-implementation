@@ -33,14 +33,19 @@ Scene::Scene()
 	//triangle first, moving counter clockwise seen from above.
 	triangles.push_back(Triangle(floor1, roof1, roof6, ColorDbl("red")));
 	triangles.push_back(Triangle(floor1, roof6, floor6, ColorDbl("red")));
+
 	triangles.push_back(Triangle(floor6, roof6, roof5, ColorDbl("green")));
 	triangles.push_back(Triangle(floor6, roof5, floor5, ColorDbl("green")));
+
 	triangles.push_back(Triangle(floor5, roof5, roof4, ColorDbl("blue")));
 	triangles.push_back(Triangle(floor5, roof4, floor4, ColorDbl("blue")));
-	triangles.push_back(Triangle(floor4, roof4, roof3, ColorDbl("yellow")));
-	triangles.push_back(Triangle(floor4, roof3, floor3, ColorDbl("yellow")));
-	triangles.push_back(Triangle(floor3, roof3, roof2, ColorDbl("cyan")));
-	triangles.push_back(Triangle(floor3, roof2, floor2, ColorDbl("cyan")));
+
+	triangles.push_back(Triangle(floor4, roof4, roof3, ColorDbl("green")));
+	triangles.push_back(Triangle(floor4, roof3, floor3, ColorDbl("green")));
+
+	triangles.push_back(Triangle(floor3, roof3, roof2, ColorDbl("red")));
+	triangles.push_back(Triangle(floor3, roof2, floor2, ColorDbl("red")));
+
 	triangles.push_back(Triangle(floor2, roof2, roof1, ColorDbl("magenta")));
 	triangles.push_back(Triangle(floor2, roof1, floor1, ColorDbl("magenta")));
 }
@@ -56,8 +61,9 @@ void Scene::triangleIntersect(Ray * rayIn)
 	for(size_t i = 0; i<triangles.size(); ++i){
 		if((*it).rayIntersection(rayIn)){
 			triangles_intersected.push_back(*(it));
+			rayIn->raycolor = (*it).color;
 		}
 		++it;
-		
+
 	}
 }

@@ -23,7 +23,7 @@ ColorDbl Pixel::getColorDouble(){
     return color;
 }
 
-void Pixel::addRay(Ray &r) {
+void Pixel::addRay(Ray r) {
     rayList.push_back(r);
 }
 

@@ -31,10 +31,8 @@ bool Triangle::rayIntersection(Ray * rayIn)
 	// Calculate t; The distance to the intersection in the Ray direction
 	t = (glm::dot(glm::cross((rayIn->start - vertex1),edge1), edge2)) / (glm::dot(glm::cross(rayIn->direction, edge2), edge1));
 
-	// Fetch the color of the ray
-	rayIn->raycolor = color;
 
 	// Set end point of ray
-	rayIn->end = rayIn->start + glm::vec3(t,t,t)*rayIn->direction;
+	rayIn->end = rayIn->start + t*rayIn->direction;
 	return (t > 0 && t < 99999);
 }
