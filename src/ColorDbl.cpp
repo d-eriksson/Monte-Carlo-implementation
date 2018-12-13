@@ -13,6 +13,43 @@ ColorDbl::ColorDbl(double R, double G, double B){
   g= std::min(G, 1.0);
   b= std::min(B, 1.0);
 }
+ColorDbl::ColorDbl(std::string col) {
+	if (col == "red") {
+		r = 1;
+		g = 0;
+		b = 0;
+	}
+	else if (col == "green") {
+		r = 0;
+		g = 1;
+		b = 0;
+	}
+	else if (col == "blue") {
+		r = 0;
+		g = 0;
+		b = 1;
+	}
+	else if (col == "yellow") {
+		r = 1;
+		g = 1;
+		b = 0;
+	}
+	else if (col == "cyan") {
+		r = 0;
+		g = 1;
+		b = 1;
+	}
+	else if (col == "magenta") {
+		r = 1;
+		g = 0;
+		b = 1;
+	}
+	else if (col == "white") {
+		r = 1;
+		g = 1;
+		b = 1;
+	}
+}
 double ColorDbl::getHighestIntesity(){
     return std::max(std::max(r,g),b);
 }

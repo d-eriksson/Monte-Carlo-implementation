@@ -1,6 +1,6 @@
 #ifndef MONTECARLO_SCENE_H
 #define MONTECARLO_SCENE_H
-#include "Triangle.h"
+#include "triangle.h"
 #include <list>
 
 class Scene {

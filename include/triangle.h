@@ -1,6 +1,6 @@
 #ifndef MONTECARLO_TRIANGLE_H
 #define MONTECARLO_TRIANGLE_H
-#include "Ray.h"
+#include "ray.h"
 
 class Triangle {
 public:
@@ -19,9 +19,13 @@ public:
 	//Constructors; Default constructor is not used
 	Triangle() = delete;
 	//Temporary non-color version
-	Triangle(glm::vec3 vert1, glm::vec3 vert2, glm::vec3 vert3);
-	//Triangle(glm::vec3 vert1, glm::vec3 vert2, glm::vec3 vert3, glm::vec3 triangle_color);
+	//Triangle(glm::vec3 vert1, glm::vec3 vert2, glm::vec3 vert3);
+	Triangle(glm::vec3 vert1, glm::vec3 vert2, glm::vec3 vert3, ColorDbl col);
 
+	// This function determines if there is an intersection between the ray and "this" triangle
 	bool Triangle::rayIntersection(Ray * rayIn);
+
+	//Variable to store distance of intersection in every triangle (NOT NECESSARY LATER)
+	double t;
 };
 #endif //MONTECARLO_TRIANGLE_H

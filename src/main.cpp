@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Direction.h"
 #include "Vertex.h"
-//#include "triangle.h"
+#include "triangle.h"
 #include "ColorDbl.h"
 #include "Scene.h"
 #include "Pixel.h"
@@ -10,7 +10,7 @@ using namespace std;
 
 int main(void) {
 
-	Ray ray(glm::vec3(0,0,0), glm::vec3(-1,2,1));
+	Ray ray(glm::vec3(0,0,0), glm::vec3(-1,-2,0));
 	Scene S;
 
 	//Call triangleIntersect to create the triangles_intersected list
@@ -24,6 +24,8 @@ int main(void) {
 	<< S.triangles_intersected.front().vertex1.x << ", "
 	<< S.triangles_intersected.front().vertex1.y << ", "
 	<< S.triangles_intersected.front().vertex1.z << " )" << std::endl;
+
+	std::cout << "The intersection distance was: " << S.triangles_intersected.front().t << std::endl;
 
 	/*
 	std::cout << "( " << triangle_hit.vertex1.x << ", " << triangle_hit.vertex1.y << ", " << triangle_hit.vertex1.z << " )" << endl;

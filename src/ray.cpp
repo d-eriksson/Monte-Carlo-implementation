@@ -1,4 +1,4 @@
-#include "Ray.h"
+#include "ray.h"
 
 Ray::Ray(glm::vec3 origin, glm::vec3 dir)
 {

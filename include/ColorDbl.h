@@ -6,6 +6,7 @@ class ColorDbl {
   public:
     ColorDbl();
     ColorDbl(double a, double b, double c);
+	ColorDbl(std::string col);
     double getHighestIntesity();
     double getAverageIntesity();
     double getR();
