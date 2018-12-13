@@ -8,6 +8,7 @@ class Pixel {
 public:
     Pixel(ColorDbl colorDouble = ColorDbl(0.0,0.0,0.0));
     void setColorDouble(const ColorDbl &colorDouble);
+    void setColorDoubleFromRayList();
     void addRay(Ray &);
     ColorDbl getColorDouble();
     std::vector<Ray> getRayList();
